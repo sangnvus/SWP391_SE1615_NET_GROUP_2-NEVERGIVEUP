@@ -18,12 +18,12 @@
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../css/styles.css" rel="stylesheet" />
-        <link href="../css/main.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
         <!-- Navigation-->
-        <%@include file="../component/NavbarHome.jsp" %>
+        <%@include file="component/NavbarHome.jsp" %>
         <!-- Header-->
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
@@ -161,7 +161,7 @@
             </div>
         </section>
         <!-- Footer-->
-        <%@include file="../component/FooterHome.jsp" %>
+        <%@include file="component/FooterHome.jsp" %>
     </body>
 </html>
 
