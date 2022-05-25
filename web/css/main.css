@@ -1,10 +1,5 @@
 
-/*
-    Note: It is best to use a less version of this file ( see http://css2less.cc
-    For the media queries use @screen-sm-min instead of 768px.
-    For .omb_spanOr use @body-bg instead of white.
-*/
-
+/* Css login */
 @media (min-width: 768px) {
     .omb_row-sm-offset-3 div:first-child[class*="col-"] {
         margin-left: 25%;
@@ -17,7 +12,7 @@
 }
 	
 .omb_login .omb_socialButtons a {
-	color: white; // In yourUse @body-bg 
+	color: white;
 	opacity:0.9;
 }
 .omb_login .omb_socialButtons a:hover {
@@ -62,6 +57,7 @@
     color: red;
 }
 
+/* Css Register */
 	
 @media (min-width: 768px) {
     .omb_login .omb_forgotPwd {
@@ -163,4 +159,30 @@
     margin-top: 8%;
     margin-bottom: -15%;
     color: #495057;
+}
+
+/*Css footer*/
+.footer-bg{
+    background-image: url("https://thietbibepauviet.com/wp-content/uploads/2021/07/xu-huong-giao-do-an-1.jpg");
+}
+.footer{
+    background: rgba(0,0,0,0.34);
+    color: white;
+}
+.footer h3{
+    font-size: 50px;
+    margin-top: 20px;
+    font-family: "Brush Script MT", Times, serif, Arial, Helvetica, sans-serif;
+}
+.footer-icon{
+    font-size: 40px;
+}
+.footer-icon a{
+    text-decoration: none;
+    color: white;
+}
+.contact-image{
+    width: 75%;
+    height: 95%;
+    margin-top: 15px;
 }
