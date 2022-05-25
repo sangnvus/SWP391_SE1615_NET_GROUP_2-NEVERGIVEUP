@@ -3,7 +3,7 @@
     Created on : May 25, 2022, 8:45:26 AM
     Author     : KhacBao
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5 d-flex justify-content-center">
@@ -15,15 +15,6 @@
                 <li class="nav-item"><a class="nav-link" href="#!">Menu</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">All Products</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                    </ul>
-                </li> -->
             </ul>
             <form class="d-flex">
                 <button class="btn btn-outline-dark" type="submit">
@@ -32,18 +23,34 @@
                     <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                 </button>
             </form>
-            
+
         </div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
+                <c:if test="${sessionScope.Account ==null}">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://cdn.iconscout.com/icon/free/png-256/account-avatar-profile-human-man-user-30448.png" height="40px" width="70%"/>  
                     </a>
+                </c:if>
+                <c:if test="${sessionScope.Account !=null}">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false"> <img src="${sessionScope.Account.imageURL}" class="rounded-circle" alt="A girl" width="50"/>  
+                    </a> ${sessionScope.Account.displayname}  
+                </c:if>
+                <c:if test="${sessionScope.Account ==null}">
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="LoginController?do=login">Login</a></li>
-                            <li><a class="dropdown-item" href="RegisterController">Regsiter</a></li>  
-                    </ul>  
-                </li>
-            </ul>
+                        <li><a class="dropdown-item" href="login">Login</a></li>
+                        <li><a class="dropdown-item" href="register">Regsiter</a></li>  
+                    </ul>   
+                </c:if>
+                <c:if test="${sessionScope.Account !=null}">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="login?do=logout">Logout</a></li>
+                        <li><a class="dropdown-item" href="login?do=updateprofile">Update Profile</a></li>  
+                    </ul>   
+                </c:if>
+
+            </li>
+        </ul>
     </div>
 </nav>

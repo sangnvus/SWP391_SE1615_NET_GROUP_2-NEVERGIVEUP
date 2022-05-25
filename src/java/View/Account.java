@@ -16,13 +16,13 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Account {
-    private int AccountID;
-    private String UserName;
-    private String Password;
-    private String DisplayName;
-    private String Address;
-    private String Email;
-    private String Phone;
-    private String ImageURL;
-    private int Role;    
+    private int accountid;
+    private String username;
+    private String password;
+    private String displayname;
+    private String address;
+    private String email;
+    private String phone;
+    private String imageURL;
+    private int role;    
 }

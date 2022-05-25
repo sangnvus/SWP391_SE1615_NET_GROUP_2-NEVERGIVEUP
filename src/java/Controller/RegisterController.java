@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author admin
  */
-@WebServlet(name = "HomeController", urlPatterns = {"/home"})
-public class HomeController extends HttpServlet {
+@WebServlet(name = "RegisterController", urlPatterns = {"/register"})
+public class RegisterController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,13 +33,8 @@ public class HomeController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            String service = request.getParameter("do");
-            if(service ==null) {
-                service = "home";
-            }
-            if(service.equals("home")) {
-                response.sendRedirect("home.jsp");
-            }
+            /* TODO output your page here. You may use following sample code. */
+            response.sendRedirect("register.jsp");
         }
     }
 
