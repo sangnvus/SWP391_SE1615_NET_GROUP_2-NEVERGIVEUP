@@ -18,6 +18,9 @@
 =======
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/main.css" rel="stylesheet">
+<<<<<<< HEAD
+>>>>>>> f98b872601d39a5ecdca7de7bce7dde0505df997
+=======
 >>>>>>> f98b872601d39a5ecdca7de7bce7dde0505df997
     </head>
     <body>
